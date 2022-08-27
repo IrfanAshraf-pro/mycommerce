@@ -2,8 +2,7 @@ import React from "react";
 import Tabmenu from "../features/tabmenu/Tabmenu";
 import "./Arrival.css";
 import CarouselProductView from "../features/CarouselProductView/CarouselProductView";
-import holdingMobile from "../../images/holding-mobile.jpg";
-
+import imageHolding from "../../images/holding-mobile.jpg";
 const Arrival = () => {
 	const selectedCategory = (category) => {
 		console.log(category);
@@ -22,16 +21,12 @@ const Arrival = () => {
 					<Tabmenu selectedCategory={selectedCategory} />
 				</div>
 			</div>
-			<div className="arrival-product-view-container container">
+			<div className="arrival-product-view-container container flex">
 				<div className="arrival-carousel-hold">
 					<CarouselProductView />
 				</div>
-				<div className="arrival-product-view-image-container">
-					<img
-						src={holdingMobile}
-						alt="a man holding a phone"
-						className="arrival-product-view-image"
-					/>
+				<div className="arrival-product-image-container">
+					<img src={imageHolding} alt="" className="arrival-product-image" />
 				</div>
 			</div>
 		</div>

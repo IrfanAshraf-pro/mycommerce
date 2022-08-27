@@ -49,13 +49,20 @@
 	/* width: 100%; */
 	margin: 0 auto;
 }
-.arrival-product-view-image {
-	max-width: 250px;
-}
-.arrival-product-view-image-container {
-	/* max-width: 100%; */
-	align-self: flex-start;
-}
 .arrival-carousel-hold {
-	align-self: flex-start;
+	display: inline;
+}
+.arrival-product-image-container {
+	width: 250px;
+}
+.arrival-product-image {
+	width: 250px;
+}
+@media (max-width: 768px) {
+	.arrival-product-view-container {
+		display: block;
+	}
+	.arrival-product-image-container {
+		display: none;
+	}
 }
