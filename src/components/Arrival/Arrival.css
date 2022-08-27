@@ -1,0 +1,61 @@
+.arrival-title {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 2em 0em;
+}
+.arrival-title h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	color: var(--headingColor);
+	margin-top: 0.3em;
+}
+.arrival-title p {
+	font-size: 0.9rem;
+	font-weight: 300;
+	color: var(--textColor);
+}
+.arrival-span-container {
+	padding: 0.6rem 0;
+}
+.arrival-span-container span {
+	width: 55px;
+	height: 1px;
+	display: inline-block;
+	position: relative;
+	background: var(--outlineColor);
+}
+.arrival-span-container span:before {
+	width: 4px;
+	height: 1px;
+	background: inherit;
+	position: absolute;
+	content: "";
+	top: 0;
+	left: -9px;
+}
+.arrival-span-container span:after {
+	width: 4px;
+	height: 1px;
+	background: inherit;
+	position: absolute;
+	content: "";
+	top: 0;
+	right: -9px;
+}
+.arrival-body {
+	/* width: 100%; */
+}
+.arrival-product-view-container {
+	/* width: 100%; */
+	margin: 0 auto;
+}
+.arrival-product-view-image {
+	max-width: 250px;
+}
+.arrival-product-view-image-container {
+	/* max-width: 100%; */
+	align-self: flex-start;
+}
+.arrival-carousel-hold {
+	align-self: flex-start;
+}

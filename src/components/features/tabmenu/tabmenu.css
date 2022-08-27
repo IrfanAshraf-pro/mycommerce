@@ -1,0 +1,69 @@
+.tabmenu-container {
+}
+.tabmenu-title {
+	height: 3rem;
+	width: 100%;
+	padding: 1rem;
+	justify-content: space-between;
+	min-width: 300px;
+	border-radius: 0.7rem;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.tabmenu-category-display {
+	font-size: 1.3rem;
+	font-weight: 300;
+	color: var(--textColor);
+}
+.tabmenu-icon {
+	font-size: 2rem;
+	font-weight: 300;
+	color: var(--textColor);
+}
+.tabmenu-menu {
+	list-style: none;
+	padding: 1em 0.9em;
+	color: var(--textColor);
+	font-weight: 400;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 0.7rem;
+	text-align: center;
+}
+.tabmenu-item {
+	padding: 0.5em;
+	cursor: pointer;
+}
+.tabmenu-item.active {
+	background-color: var(--outlineColor);
+	border-radius: 0.7rem;
+	width: 100%;
+	color: white;
+}
+.tabmenu-desktop {
+	display: none;
+}
+.tabmenu-menu-desktop {
+	list-style: none;
+	padding: 1em 0.9em;
+	color: var(--textColor);
+	font-weight: 400;
+	border-radius: 0.7rem;
+	text-align: center;
+	gap: 2em;
+}
+.tabmenu-item-desktop {
+	padding: 0.5em 0.9em;
+	cursor: pointer;
+}
+.active-desktop {
+	background-color: var(--outlineColor);
+	border-radius: 0.7rem;
+	color: white;
+}
+@media (min-width: 768px) {
+	.tabmenu-mobile {
+		display: none;
+	}
+	.tabmenu-desktop {
+		display: block;
+	}
+}

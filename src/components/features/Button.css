@@ -1,0 +1,112 @@
+:root {
+	--primaryBtnColor: #b8cd05;
+	--warningBtnColor: #ffd028;
+	--dangerBtnColor: #eb3f27;
+	--successBtnColor: #75fa83;
+	--whiteBtnColor: #fdfdfd;
+	--darkBtnColor: #181717;
+}
+.btn {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	border-radius: 2.4rem;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+}
+
+/* Button color and styles */
+
+.btn--primary--solid {
+	background-color: var(--primaryBtnColor);
+	color: var(--whiteBtnColor);
+	border: none;
+}
+.btn--warning--solid {
+	background-color: var(--warningBtnColor);
+	color: var(--whiteBtnColor);
+	border: none;
+}
+
+.btn--danger--solid {
+	background-color: var(--dangerBtnColor);
+	color: var(--whiteBtnColor);
+	border: none;
+}
+
+.btn--success--solid {
+	background-color: var(--successBtnColor);
+	color: var(--whiteBtnColor);
+	border: none;
+}
+.btn--white--solid {
+	background-color: #fff;
+	color: var(--primaryBtnColor);
+	border: none;
+}
+.btn--primary--outline {
+	background-color: transparent;
+	border: 2px solid var(--primaryBtnColor);
+	color: var(--primaryBtnColor);
+}
+
+.btn--warning--outline {
+	background-color: transparent;
+	border: 2px solid var(--warningBtnColor);
+	color: var(--warningBtnColor);
+}
+
+.btn--danger--outline {
+	background-color: transparent;
+	border: 2px solid var(--dangerBtnColor);
+	color: var(--dangerBtnColor);
+}
+
+.btn--success--outline {
+	background-color: transparent;
+	border: 2px solid var(--successBtnColor);
+	color: var(--successBtnColor);
+}
+.btn--primary--square {
+	background-color: var(--primaryBtnColor);
+	color: var(--whiteBtnColor);
+	border: none;
+	border-radius: 0;
+}
+.btn--primary--square--dark {
+	background-color: var(--darkBtnColor);
+	color: var(--whiteBtnColor);
+	border: none;
+	border-radius: 0;
+}
+/* button Sizes */
+.btn--small {
+	padding: 0.4em 0.6em;
+	font-size: 1rem;
+}
+.btn--medium {
+	padding: 0.6em 1.125em;
+	font-size: 1.125rem;
+}
+.btn--large {
+	padding: 0.9em 1.8em;
+	font-size: 1.4rem;
+}
+.btn--wide {
+	padding: 0.7em 2em;
+	font-size: 1.3rem;
+	width: 100%;
+}
+.btn--carousel {
+	padding: 0.7em 2em;
+	font-size: 1.2rem;
+	font-weight: 300;
+	width: 100%;
+}
+.btn--carousel--hover {
+	font-size: 0.9rem;
+	padding: 0.7em 1em;
+}

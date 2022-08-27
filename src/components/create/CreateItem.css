@@ -1,0 +1,125 @@
+
+.container-create-item{
+    margin:4rem 0;
+    width:100%;
+    color:var(--gray700)
+}
+input,select{
+    color:var(--gray700)
+}
+.create-item-title{
+    font-size:2em;
+    font-weight:500;
+    color:var(--gray700)
+}
+.inner-create-item-container{
+    border:1px solid var(--gray200);
+    width:70%;
+    margin: 0 auto;
+    border-radius:1.2rem;
+    padding:2.3em 1.5em;
+    font-size:1.2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.create-item-form {
+    width:100%;
+    gap:1.4em;
+}
+.create-item-field{
+    width:100%;
+    padding:.3rem .1rem;
+}
+.text-fieldEnter{
+padding:.3rem 0;
+border-bottom:1px solid var(--gray400)
+}
+.create-item-priceContainer{
+    width:100%;
+    padding:.5em .9em;
+    justify-content:space-between;
+}
+.create-item-select-container{
+    border-bottom:1px solid var(--gray400)
+}
+
+.create-item-select{
+    width:100%;
+    padding:.4em .2em;
+    font-size:1.2rem;
+    resize: none;
+    outline: none;
+    border:none;
+}
+.create-item-options{
+    padding:1em .1em;
+
+}
+
+.create-item-upload-image-container{
+    border:2px dotted var(--gray400);
+    width:100%;
+    cursor:pointer;
+    border-radius:.8em;
+    padding:3.5em 2em;
+}
+.create-item-image-label{
+    cursor:pointer;
+    width:100%;
+}
+.image-upload-container{
+    width:100%;
+}
+.image-upload{
+    display:none;
+}
+
+.input-field{
+    outline:none;
+    border:none;
+    background:transparent;
+    width:100%;
+    font-size:1.3rem;
+    font-weight:300; 
+    color:var(--gray700) 
+}
+::placeholder{
+    font-weight:500;
+    font-size:1.2rem;
+}
+.create-item-icons{
+    font-size:1.3rem;
+    margin-right:.3em;
+
+}
+.button-container-create-item{
+    width:40%;
+    margin-top:1.3rem;
+}
+
+.download-image-container{
+    position:relative;
+}
+.download-image{
+    width:100%;
+    object-fit:cover;
+}
+.btn-delete{
+    position:absolute;
+    bottom:0.75rem;
+    right:0.75rem;
+}
+@media(max-width:768px){
+    .inner-create-item-container {
+        width:90%;
+    }
+    .create-item-priceContainer{
+        flex-direction:column;
+        gap:1.5em;
+    }
+    .text-fieldEnter{
+        width:100%;
+    }
+    .button-container-create-item{
+        width:60%;
+    }
+}

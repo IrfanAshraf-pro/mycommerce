@@ -1,0 +1,214 @@
+/* =================== */
+/*  Hero Container */
+/* =================== */
+
+.hero-container {
+	justify-content: space-between;
+	color: white;
+	text-transform: uppercase;
+	margin: 2rem auto;
+}
+.dark-filter {
+	background-color: rgba(0, 0, 0, 0.3);
+	max-width: 100%;
+	border-radius: 1.2em;
+	padding: 2em 1em;
+}
+.left-hero-container {
+	width: 50%;
+	background-image: url("../../../images/women_mobile.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	border-radius: 1.2em;
+}
+.left-child-inner-container {
+	min-height: 560px;
+}
+.left-inner-child {
+	width: 75%;
+	margin: 0 auto;
+}
+.left-child-inner-container h2 {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 900;
+}
+.left-child-inner-container h2:hover {
+	color: var(--outlineColor);
+}
+.hero-span-container {
+	padding: 1.125rem 0;
+}
+
+.hero-span-container span {
+	width: 55px;
+	height: 1px;
+	display: inline-block;
+	position: relative;
+	background: var(--outlineColor);
+}
+.hero-span-container span:before {
+	width: 4px;
+	height: 1px;
+	background: inherit;
+	position: absolute;
+	content: "";
+	top: 0;
+	left: -9px;
+}
+.hero-span-container span:after {
+	width: 4px;
+	height: 1px;
+	background: inherit;
+	position: absolute;
+	content: "";
+	top: 0;
+	right: -9px;
+}
+.left-child-inner-container p {
+	font-size: 0.9rem;
+	line-height: 2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	text-transform: lowercase;
+}
+
+.right-hero-container {
+	width: 45%;
+	gap: 2em;
+}
+.hero-right-children {
+	width: 100%;
+}
+.right-children-inner-container {
+	padding: 5em 2em;
+	gap: 1.2em;
+	align-items: flex-start;
+}
+.hero-right-children-div-top {
+	background-image: url("../../../images/man_mobile.jpg");
+}
+.hero-right-children-div-bottom {
+	background-image: url("../../../images/man_mobile_2.jpg");
+}
+
+.hero-right-children-div-bottom,
+.hero-right-children-div-top {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 1.2em;
+}
+.right-children-inner-container p {
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+.right-children-inner-container p span {
+	color: var(--outlineColor);
+	font-weight: 500;
+}
+.right-children-inner-container h3 {
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+@media (max-width: 768px) {
+	.hero-container {
+		flex-direction: column;
+	}
+	.left-hero-container {
+		width: 100%;
+	}
+	.right-hero-container {
+		width: 100%;
+		margin: 2em 0;
+	}
+	.left-child-inner-container {
+		min-height: 280px;
+	}
+	.left-inner-child {
+		width: 100%;
+	}
+}
+
+/*===================*/
+/*      Parallax     */
+/*===================*/
+.parallax-container {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* set attachment
+      fixed=parallax
+      scroll=normal
+  */
+	background-attachment: fixed;
+	background-image: url("../../../images/parallax_background.gif");
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.parallax-inner-container {
+}
+.parallax-left {
+	padding: 6em 0;
+	padding-left: 2rem;
+	width: 55%;
+}
+.parallax-right {
+	width: 45%;
+}
+.parallax-left h2 {
+	font-size: 4rem;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 4rem;
+}
+.parallax-span-container {
+	padding: 1.125rem 1rem;
+}
+.parallax-span-container span {
+	width: 55px;
+	height: 1px;
+	display: inline-block;
+	position: relative;
+	background: #fff;
+}
+.parallax-span-container span:before {
+	width: 4px;
+	height: 1px;
+	background: inherit;
+	position: absolute;
+	content: "";
+	top: 0;
+	left: -9px;
+}
+.parallax-left p {
+	font-size: 1.1rem;
+	font-weight: 300;
+	color: #fff;
+	line-height: 1.7rem;
+}
+.parallax-btn-container {
+	margin: 1.5rem 0;
+}
+.parallax-image {
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.parallax-right {
+		display: none;
+	}
+	.parallax-left {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.parallax-inner-container {
+		padding: 1em 2em;
+	}
+}

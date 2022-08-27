@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import { Routes,Route } from 'react-router-dom';
 import './App.css';
-
+import CreateItem from './components/create/CreateItem';
+import Toast from './components/features/Toast/Toast';
+import Navbar from './components/Navbar/Navbar';
+import HomePage from './components/pages/HomePage/HomePage'
+import { getAllItems } from './utils/firebaseFunctions';
+import { useDispatch } from "react-redux";
+import { setItems } from './reduxtoolkit/features/itemsSlice'
 function App() {
+  const dispatch = useDispatch();
+  const fetchitems = async () => {
+    const data=await getAllItems()
+    dispatch(setItems(data))
+    
+  }
+  useEffect(() => {
+    fetchitems()
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      {/* <Toast/> */}
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path="/createitem" element={<CreateItem/>}/>
+        </Routes>
     </div>
   );
 }
