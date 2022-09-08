@@ -19,7 +19,6 @@ import CarouselItem from "./CarouselItem/CarouselItem";
 
 SwiperCore.use([Pagination, Scrollbar, A11y, EffectFade, Autoplay]);
 const Carousel = () => {
-	console.log(sliderData);
 	return (
 		<div className="swiper-container">
 			<Swiper
@@ -30,7 +29,7 @@ const Carousel = () => {
 				pagination={{ clickable: true }}
 				// onSwiper={(swiper) => console.log(swiper)}
 				// onSlideChange={() => console.log("slide change")}
-				autoplay={{ delay: 10000 }}
+				autoplay={{ delay: 3000 }}
 				className="carousel-swipper-wrapper"
 			>
 				{sliderData.map((item) => (

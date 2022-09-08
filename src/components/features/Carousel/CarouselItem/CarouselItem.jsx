@@ -12,6 +12,7 @@ const CarouselItem = ({ item }) => {
 				<p>
 					Price : <span>{item.price}$</span>
 				</p>
+				<p>{item.desc}</p>
 			</div>
 		</div>
 	);

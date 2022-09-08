@@ -1,7 +1,7 @@
 .arrival-title {
 	text-align: center;
 	text-transform: uppercase;
-	padding: 2em 0em;
+	padding: 2em 0em 0.5em 0em;
 }
 .arrival-title h2 {
 	font-size: 3rem;
@@ -46,7 +46,7 @@
 	/* width: 100%; */
 }
 .arrival-product-view-container {
-	/* width: 100%; */
+	width: 100%;
 	margin: 0 auto;
 }
 .arrival-carousel-hold {
@@ -64,5 +64,13 @@
 	}
 	.arrival-product-image-container {
 		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
+		gap: 0.3rem;
 	}
 }

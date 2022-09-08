@@ -3,10 +3,10 @@ import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { motion } from "framer-motion";
 import "./tabmenu.css";
 
-const Tabmenu = ({ selectedCategory }) => {
+const Tabmenu = ({ selectedCategory, isFlex, list }) => {
 	const [selected, setSelected] = useState("Please select a category");
 	const [isOpen, setIsOpen] = useState(false);
-	const categories = ["Huawei", "Apple", "Samsung", "Oppo", "Infinix"];
+	const categories = list || ["Huawei", "Apple", "Samsung", "Oppo", "Infinix"];
 	return (
 		<div className="tabmenu-container">
 			<div className="tabmenu-desktop">
@@ -14,7 +14,9 @@ const Tabmenu = ({ selectedCategory }) => {
 					initial={{ opacity: 0, x: 200 }}
 					animate={{ opacity: 1, x: 0 }}
 					exit={{ opacity: 0, x: 200 }}
-					className="tabmenu-menu-desktop flex"
+					className={`${
+						isFlex ? "products-tabmenu flex-col" : " flex tabmenu-menu-desktop "
+					}`}
 				>
 					{categories.map((item, index) => (
 						<motion.li
@@ -25,9 +27,9 @@ const Tabmenu = ({ selectedCategory }) => {
 								setIsOpen(!isOpen);
 								selectedCategory(item);
 							}}
-							className={`tabmenu-item-desktop ${
-								selected === item && "active-desktop"
-							}`}
+							className={`${
+								isFlex ? "products-item-desktop" : "tabmenu-item-desktop"
+							} ${selected === item && "active-desktop"}`}
 						>
 							{item}
 						</motion.li>

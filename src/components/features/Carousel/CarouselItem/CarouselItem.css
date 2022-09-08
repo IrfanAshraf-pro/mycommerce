@@ -5,12 +5,10 @@
 	/* transition:all .5s; */
 }
 .carousel-item-img {
-	width: 70%;
 	max-width: 100%;
-	filter: drop-shadow(6px 5px 17px var(--outlineColor));
+	box-shadow: 0px 0px 50px 4px rgba(184, 205, 5, 0.45);
 }
 .carousel-item-body {
-	margin-top: -2rem;
 	font-family: "Raleway", sans-serif;
 	text-align: center;
 	color: var(--headingColor);
@@ -23,9 +21,9 @@
 	letter-spacing: 0.2rem;
 }
 .carousel-item-body P {
-	font-size: 1.2rem;
+	font-size: 0.875rem;
 	font-weight: 300;
-	padding: 0.7em;
+	padding: 0.5em;
 	color: var(--textColor);
 }
 .carousel-item-body P span {

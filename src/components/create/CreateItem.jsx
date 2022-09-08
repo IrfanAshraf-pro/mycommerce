@@ -14,7 +14,7 @@ import {
 import { storage } from "../../firebase.config";
 import Loader from "../features/Loader/Loader";
 
-import  {saveItem}  from "../../utils/firebaseFunctions";
+import { saveItem } from "../../utils/firebaseFunctions";
 
 function CreateItem() {
 	const [name, setName] = useState("");
@@ -25,6 +25,13 @@ function CreateItem() {
 	const [imageAsset, setImageAsset] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
 
+	const emptyingStates = () => {
+		setName("");
+		setCompany("");
+		setPrice("");
+		setDiscount("");
+		setImageAsset(null);
+	};
 	const uploadImage = (e) => {
 		setIsLoading(true);
 		const imageFile = e.target.files[0];
@@ -59,38 +66,37 @@ function CreateItem() {
 		});
 	};
 
-	const saveDetails = (e) => {
-    try {
-      e.preventDefault()
-      if ((!name || !price || !imageAsset || !price || !company)) {
-        window.alert("Please fill all details");
-      } else if(price<=discount){
-        window.alert('please enter correct discount')
-      }
-      else {
-        const data = {
-          id: `${Date.now()}`,
-          name,
-          imageURL: imageAsset,
-          company: company,
-          qty: 1,
-          price: price,
-          discount: discount,
-        };
-        saveItem(data);
-        console.log(data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+	const saveDetails = async (e) => {
+		try {
+			e.preventDefault();
+			if (!name || !price || !imageAsset || !price || !company) {
+				window.alert("Please fill all details");
+			} else if (price <= discount) {
+				window.alert("please enter correct discount");
+			} else {
+				const data = {
+					id: `${Date.now()}`,
+					name,
+					imageURL: imageAsset,
+					company: company,
+					qty: 1,
+					price: price,
+					discount: discount,
+				};
+				await saveItem(data);
+				emptyingStates();
+				console.log("submission successful");
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
 	return (
 		<div className="container-create-item ">
 			<h1 className="create-item-title flex">Please Enter Details</h1>
 			<div className="inner-create-item-container flex">
-				<form onSubmit={saveDetails} className="create-item-form flex-col" >
+				<form onSubmit={saveDetails} className="create-item-form flex-col">
 					<div className="create-item-field text-fieldEnter flex">
 						<FaMobileAlt className="create-item-icons" />
 						<input
@@ -151,7 +157,7 @@ function CreateItem() {
 											className="download-image"
 										/>
 										<div className="btn-delete">
-											<Button onClick={deleteImage} buttonSize="btn--large" >
+											<Button onClick={deleteImage} buttonSize="btn--large">
 												<MdDelete className="text-white " />
 											</Button>
 										</div>

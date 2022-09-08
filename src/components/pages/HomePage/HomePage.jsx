@@ -5,6 +5,7 @@ import Arrival from "../../Arrival/Arrival";
 import "./Homepage.css";
 
 import parallaxRight from "../../../images/parallax_image.png";
+import ProductCard from "../../features/ProductCard/ProductCard";
 
 const HomePage = () => {
 	return (
@@ -84,6 +85,9 @@ const HomePage = () => {
 							</div>
 						</div>
 					</div>
+				</section>
+				<section className="product-card-container">
+					<ProductCard />
 				</section>
 			</main>
 		</>

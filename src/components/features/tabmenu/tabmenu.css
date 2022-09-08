@@ -50,9 +50,23 @@
 	text-align: center;
 	gap: 2em;
 }
+.products-tabmenu {
+	list-style: none;
+	padding: 1em 0.9em;
+	color: var(--textColor);
+	font-weight: 400;
+	border-radius: 0.7rem;
+	text-align: center;
+	gap: 1em;
+}
 .tabmenu-item-desktop {
 	padding: 0.5em 0.9em;
 	cursor: pointer;
+}
+.products-item-desktop {
+	padding: 0.5em 0.9em;
+	cursor: pointer;
+	width: 100%;
 }
 .active-desktop {
 	background-color: var(--outlineColor);
