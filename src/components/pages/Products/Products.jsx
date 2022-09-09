@@ -17,7 +17,7 @@ const Products = () => {
 	const [productPerPage] = useState(10);
 	const [resetPaginate, setResetpaginate] = useState(false);
 	const companies = ["Huawei", "Apple", "Samsung", "Oppo", "Infinix"];
-	const os = ["IOS", "ANDROID", "WINDOWS"];
+	// const os = ["IOS", "ANDROID", "WINDOWS"];
 
 	const { items } = useSelector((state) => state.items);
 	const selectedCategory = (category) => {
@@ -118,7 +118,7 @@ const Products = () => {
 							</div>
 							<div className="line-bottom range-line-bottom"></div>
 						</div>
-						<div className="products-os-container">
+						{/* <div className="products-os-container">
 							<h3>Operating System</h3>
 							<Tabmenu
 								selectedCategory={selectedCategory}
@@ -126,7 +126,7 @@ const Products = () => {
 								list={os}
 							/>
 							<div className="line-bottom"></div>
-						</div>
+						</div> */}
 					</div>
 					<div className="products-right">
 						<h2 className="products-right-title">Products</h2>

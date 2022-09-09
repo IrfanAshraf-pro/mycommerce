@@ -51,7 +51,7 @@
 @media (min-width: 768px) {
 	.product-card-body {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
 		gap: 1.2rem;
 	}
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { BiSearch } from "react-icons/bi";
 import { MdShoppingBasket, MdAdd, MdLogout } from "react-icons/md";
 import "./Navbar.css";
 import Button from "../features/Button";
@@ -142,9 +141,6 @@ const Navbar = () => {
 						>
 							<MdShoppingBasket fontSize="1.3em" />
 							<div className="navbar-cart-items">{cart.length}</div>
-						</motion.div>
-						<motion.div whileTap={{ scale: 0.6 }} className="navbar-icon flex">
-							<BiSearch fontSize="1.3em" />
 						</motion.div>
 					</div>
 					<motion.button

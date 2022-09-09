@@ -23,9 +23,9 @@ const Card = ({ item }) => {
 				<img src={item.imageURL} alt="" className="card-image" />
 				<div className="flex preview-buttons">
 					<div className="preview-buttons-content flex-col">
-						<div className="preview-top">
+						{/* <div className="preview-top">
 							<Button buttonSize="btn--medium">Learn More</Button>
-						</div>
+						</div> */}
 						<div className="preview-bottom">
 							<Button onClick={addToCart} buttonSize="btn--medium">
 								Add To Cart
