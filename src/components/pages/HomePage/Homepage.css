@@ -211,4 +211,7 @@
 	.parallax-inner-container {
 		padding: 1em 2em;
 	}
+	.parallax-container {
+		background-attachment: scroll;
+	}
 }

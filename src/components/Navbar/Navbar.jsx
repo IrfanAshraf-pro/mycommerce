@@ -169,6 +169,7 @@ const Navbar = () => {
 									to="/"
 									className={`navbar-link ${({ isActive }) =>
 										isActive ? "active" : "inactive"}`}
+									onClick={() => setOpen(!open)}
 								>
 									Home
 								</NavLink>
@@ -178,12 +179,13 @@ const Navbar = () => {
 									to="/products"
 									className={`navbar-link ${({ isActive }) =>
 										isActive ? "active" : "inactive"}`}
+									onClick={() => setOpen(!open)}
 								>
 									Products
 								</NavLink>
 							</li>
 
-							<li className="navbar-menu-item navbar-menu-item-mobile">
+							<li className="navbar-menu-item navbar-menu-item-mobile" onClick={() => setOpen(!open)}>
 								<Button
 									onClick={SignIn}
 									buttonStyle="btn--primary--solid"
