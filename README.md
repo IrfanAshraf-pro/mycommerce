@@ -1,4 +1,4 @@
-My ecommerce store built using 
+My ecommerce store to buy the latest mobiles built using 
 #Firebase
 #React
 #React_Redux
